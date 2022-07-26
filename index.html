@@ -1,19 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="gandi purna jen" />
-    <meta
-      name="description"
-      content="BookshelfApp - aplikasi perpustakaan online"
-    />
-    <meta
-      name="keyword"
-      content="perpustakaan, bookshelfapp, buku, belajar, web"
-    />
-    <title>BookshelfApp - gandi purna jen</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="gandi purna jen" />
+  <meta name="description" content="BookshelfApp - aplikasi perpustakaan online" />
+  <meta name="keyword" content="perpustakaan, bookshelfapp, buku, belajar, web" />
+
+  <!-- style -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/741b8da9cc.js" crossorigin="anonymous"></script>
+
+  <title>BookshelfApp - gandi purna jen</title>
+</head>
+
+<body>
+  <header>
+    <nav class="container shadowMd">
+      <div class="navBrand">
+        <a href="#"><img src="./asets/img/logo.png" alt="" /></a>
+      </div>
+      <div class="navMenu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <aside class="shadowMd">
+      <h1>ADD NEW BOOK</h1>
+
+      <form>
+        <input class="shadowMd" type="text" placeholder="Title" required />
+        <input class="shadowMd" type="text" placeholder="Author" required />
+        <input class="shadowMd" type="number" min="1500" max="2022" placeholder="Year" required />
+        <input class="btn" type="submit" value="ADD BOOKS" />
+      </form>
+    </aside>
+    <article>
+      <div class="findBook">
+        <input class="shadowMd" type="text" placeholder="Find Books By Title/Author/Year" />
+        <select class="shadowMd" name="isComplete" id="isComplete"  >
+          <option value="all" selected disabled hidden>Show All</option>
+          <option value="finish">Finish Reading</option>
+          <option value="notFinish">Not Finish Reading</option>
+        </select>
+      </div>
+
+      <div class="content">
+
+        <div class="card-wrapper shadowMd">
+          <div class="cardHead">
+            <span class="noComplete"> Not finished reading</span>
+          </div>
+          <div class="cardBody">
+            <h2>Harry Potter and the Philosopher's Stone</h2>
+            <p>author: J.K Rowling</p>
+            <p>year: 1997</p>
+
+            <div class="optionBtn">
+              <span class="btnFinish">Finish Reading</span>
+              <span class="btnDelete">Delete</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-wrapper shadowMd">
+          <div class="cardHead">
+            <span class="noComplete"> Not finished reading</span>
+          </div>
+          <div class="cardBody">
+            <h2>Harry Potter and the Philosopher's Stone</h2>
+            <p>author: J.K Rowling</p>
+            <p>year: 1997</p>
+
+            <div class="optionBtn">
+              <span class="btnFinish">Finish Reading</span>
+              <span class="btnDelete">Delete</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-wrapper shadowMd">
+          <div class="cardHead">
+            <span class="noComplete"> Not finished reading</span>
+          </div>
+          <div class="cardBody">
+            <h2>Harry Potter and the Philosopher's Stone</h2>
+            <p>author: J.K Rowling</p>
+            <p>year: 1997</p>
+
+            <div class="optionBtn">
+              <span class="btnFinish">Finish Reading</span>
+              <span class="btnDelete">Delete</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-wrapper shadowMd">
+          <div class="cardHead">
+            <span class="isComplete"> Done reading</span>
+          </div>
+          <div class="cardBody"> 
+            <h2>Minah sang mata-mata NATO</h2>
+            <p>author: Kiliwuk</p> 
+            <p>year: 2022</p>
+            <div class="optionBtn">
+              <span class="btnFinish">Not finished reading</span>
+              <span class="btnDelete">Delete</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-wrapper shadowMd">
+          <div class="cardHead">
+            <span class="isComplete"> Done reading</span>
+          </div>
+          <div class="cardBody"> 
+            <h2>Minah sang mata-mata NATO</h2>
+            <p>author: Kiliwuk</p> 
+            <p>year: 2022</p>
+            <div class="optionBtn">
+              <span class="btnFinish">Not finished reading</span>
+              <span class="btnDelete">Delete</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-wrapper shadowMd">
+          <div class="cardHead">
+            <span class="isComplete"> Done reading</span>
+          </div>
+          <div class="cardBody"> 
+            <h2>Minah sang mata-mata NATO</h2>
+            <p>author: Kiliwuk</p> 
+            <p>year: 2022</p>
+            <div class="optionBtn">
+              <span class="btnFinish">Not finished reading</span>
+              <span class="btnDelete">Delete</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-wrapper shadowMd">
+          <div class="cardHead">
+            <span class="isComplete"> Done reading</span>
+          </div>
+          <div class="cardBody"> 
+            <h2>Minah sang mata-mata NATO</h2>
+            <p>author: Kiliwuk</p> 
+            <p>year: 2022</p>
+            <div class="optionBtn">
+              <span class="btnFinish">Not finished reading</span>
+              <span class="btnDelete">Delete</span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </article>
+  </main>
+
+  <footer></footer>
+
+  <!-- script -->
+  <script src="./script.js"></script>
+</body>
+
 </html>
