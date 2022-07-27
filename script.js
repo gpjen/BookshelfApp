@@ -5,20 +5,27 @@ let books = JSON.parse(localStorage.getItem("books")) || [];
 
 // element
 const showCard = document.querySelector(".content");
-const btnAddBook = document.querySelector('#addBook')
-const addForm = document.querySelector('#addForm')
+const btnAddBook = document.querySelector("#addBook");
+const addForm = document.querySelector("#addForm");
 
 //submit event
-addForm.addEventListener('submit', (e) => {
-    e.preventDefault()
-    console.log(e.title)
-})
+addForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const id = new Date().valueOf();
+  const title = document.querySelector("#inputTitle").value;
+  const author = document.querySelector("#inputAuthor").value;
+  const year = document.querySelector("#inputYear").value;
+  const isComplete = document.querySelector("#inputIsComplete").checked;
+
+  console.log({ id, title, author, year, isComplete });
+});
 
 // evenet click add btn on mobile
-btnAddBook.addEventListener('click', () => {
-    document.querySelector('aside').classList.toggle('hidden')
-    btnAddBook.classList.toggle('rotate')
-})
+btnAddBook.addEventListener("click", () => {
+  document.querySelector("aside").classList.toggle("hidden");
+  btnAddBook.classList.toggle("rotate");
+});
 
 // show data
 function showData(filterBook, shelf) {
@@ -48,14 +55,3 @@ function showData(filterBook, shelf) {
 }
 
 showData();
-
-
-
-
-
-
-
-
-
-
-

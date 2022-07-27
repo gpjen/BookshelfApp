@@ -16,7 +16,7 @@
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/741b8da9cc.js" crossorigin="anonymous"></script>
 
-  <title>BookshelfApp - gandi purna jen</title>
+  <title>test - BookshelfApp - gandi purna jen</title>
 </head>
 
 <body>
@@ -37,9 +37,13 @@
       <h1>ADD NEW BOOK</h1>
 
       <form id="addForm">
-        <input name="title" class="shadowMd" type="text" placeholder="Title" required />
-        <input name="author" class="shadowMd" type="text" placeholder="Author" required />
-        <input name="year" class="shadowMd" type="number" min="1500" max="2022" placeholder="Year" required />
+        <input id="inputTitle" name="title" class="shadowMd" type="text" placeholder="Title" required />
+        <input id="inputAuthor" name="author" class="shadowMd" type="text" placeholder="Author" required />
+        <input id="inputYear" name="year" class="shadowMd" type="number" min="1500" max="2022" placeholder="Year" required />
+        <div class="isCompleteWrapper">
+          <input id="inputIsComplete" name="isComplete" class="checkbox" type="checkbox" />
+          <p>Done reading</p>
+        </div>
         <input class="btn" type="submit" value="ADD BOOKS" />
       </form>
 
