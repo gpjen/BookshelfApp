@@ -177,7 +177,6 @@ input:focus {
 }
 .completetrue,
 .completefalse {
-  font-size: 12px;
   opacity: 0.8;
   border-radius: 2px;
   display: inline-block;
@@ -250,4 +249,11 @@ input:focus {
 .checkbox {
   width: 20px;
   height: 20px;
+}
+
+.cardHead {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }

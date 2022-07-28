@@ -1,31 +1,63 @@
-// [{"id":3657848524,"title":"Harry Potter and the Philosopher's Stone","author":"J.K Rowling","year":1997,"isComplete":false},{"id":128637612,"title":"Minah sang mata-mata NATO","author":"Kiliwuk","year":2022,"isComplete":false},{"id":33356753,"title":"Ajudan jatuh cinta","author":"mihawk","year":2020,"isComplete":true},{"id":128637612,"title":"melirik kardus kosong","author":"anadika","year":2021,"isComplete":false}]
 
 // get local data
 let books = JSON.parse(localStorage.getItem("books")) || [];
 
-// element
+// get element
 const showCard = document.querySelector(".content");
 const btnAddBook = document.querySelector("#addBook");
 const addForm = document.querySelector("#addForm");
 
-//submit event
+// add books
 addForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
   const id = new Date().valueOf();
   const title = document.querySelector("#inputTitle").value;
   const author = document.querySelector("#inputAuthor").value;
   const year = document.querySelector("#inputYear").value;
   const isComplete = document.querySelector("#inputIsComplete").checked;
-
-  console.log({ id, title, author, year, isComplete });
+  books.unshift({ id, title, author, year, isComplete });
+  saveLocalStorage(books)
+  showData();
 });
 
-// evenet click add btn on mobile
+// btn show add books (mobile)
 btnAddBook.addEventListener("click", () => {
   document.querySelector("aside").classList.toggle("hidden");
   btnAddBook.classList.toggle("rotate");
 });
+
+// btn finish, edit delete
+function setButtonOption() {
+  const optionBtn = document.querySelectorAll(".optionBtn");
+  optionBtn.forEach((cardBtn) => {
+    cardBtn.addEventListener("click", (e) => {
+      const id = parseInt(e.target.parentElement.id);
+      const btnClick = e.target.id;
+
+      if (btnClick === "btnFinish") {
+        books = books.map( book => {
+          if (book.id === id) {
+            return {...book, isComplete: !book.isComplete }
+          }
+          return book
+        })
+      } else if (btnClick === "btnEdit") {
+        console.log("edit", id);
+      }else if (btnClick === "btnDelete") {
+        books = books.filter( book => book.id !== id )
+      }
+
+      
+      saveLocalStorage(books)
+      showData()
+    });
+  });
+}
+
+// save to local storage
+function saveLocalStorage(data) {
+  localStorage.setItem("books", JSON.stringify(data));
+}
 
 // show data
 function showData(filterBook, shelf) {
@@ -42,9 +74,10 @@ function showData(filterBook, shelf) {
             <h3>${title}</h3>
             <p>author: ${author}</p>
             <p>year: ${year}</p>
-            <div class="optionBtn">
-              <span class="btnFinish">${headerBtn}</span>
-              <span class="btnDelete">Delete</span>
+            <div class="optionBtn" id="${id}">
+              <span id="btnFinish" class="btnFinish" >${headerBtn}</span>
+              <span id="btnEdit" class="btnFinish" >Edit</span>
+              <span id="btnDelete" class="btnDelete" >Delete</span>
             </div>
           </div>
         </div>
@@ -52,6 +85,7 @@ function showData(filterBook, shelf) {
   });
 
   showCard.innerHTML = data.join(" ");
+  setButtonOption();
 }
 
 showData();
