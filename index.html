@@ -42,23 +42,24 @@
     <aside>
       <h1>ADD BOOKSHELF APPS</h1>
 
-      <form class="formAside">
+      <form class="formAside" id="formCreate">
         <label for="formTitle">Title</label>
-        <input id="formTitle" type="text" required >
+        <input id="formTitle" type="text" required>
 
         <label for="formAuthor">Author</label>
-        <input id="formAuthor" type="text" required >
+        <input id="formAuthor" type="text" required>
 
         <label for="formYear">Year</label>
-        <input id="formYear" type="number" min="1500" max="2022" required >
+        <input id="formYear" type="number" min="1500" max="2022" required>
 
         <div class="checkbox">
-          <input type="checkbox" class="check" id="check2" />
-          <label for="check2" class="label">
+          <input type="checkbox" class="check" id="isComplete" />
+          <label for="isComplete" class="label">
             <svg width="50" height="50" viewbox="0 0 100 100">
               <rect x="30" y="20" width="50" height="50" stroke="#636363" fill="none" />
               <g transform="translate(0,-952.36222)">
-                <path d="m 56,963 c -102,122 6,9 7,9 17,-5 -66,69 -38,52 122,-77 -7,14 18,4 29,-11 45,-43 23,-4 " stroke="#17aa3c" stroke-width="3" fill="none" class="path1" />
+                <path d="m 56,963 c -102,122 6,9 7,9 17,-5 -66,69 -38,52 122,-77 -7,14 18,4 29,-11 45,-43 23,-4 "
+                  stroke="#17aa3c" stroke-width="3" fill="none" class="path1" />
               </g>
             </svg>
             <span>Finish Reading</span>
@@ -69,18 +70,14 @@
       </form>
 
       <!-- notificaton  -->
-      <div class="popup-wrap">
-        <div class="popup-swap swipe-show" id="popup-swap">
-          The carebian slim ola23... book added
-        </div>
-      </div>
+      <div class="popup-wrap"></div>
 
     </aside>
 
     <article>
       <h1>Hello world</h1>
 
-      
+
 
     </article>
   </main>
@@ -88,7 +85,8 @@
   <!-- footer -->
   <footer></footer>
 
-  <script src="./script.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
