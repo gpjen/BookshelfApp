@@ -68,7 +68,7 @@ main {
   cursor: default;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  background-color: white;
+  background-color: #00ff4016;
   margin-top: 20px;
   padding: 15px 10px;
   width: 100%;
@@ -208,7 +208,65 @@ main aside h1 {
 main article {
   position: relative;
   flex: 2.5;
+  padding: 20px;
 }
+
+.filter-wraper {
+  border: 1px black solid;
+  margin-top:16px ;
+  /* height: 40px; */
+  padding: 0 20px;
+  padding-bottom: 20px;
+}
+
+.search-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2px 0;
+  margin-bottom: 20px ;
+}
+
+.search-filter input:nth-child(1) {
+  width: 340px;
+  height: 35px;
+  padding: 10px;
+  display: block;
+  border: none;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;
+
+}
+
+.search-filter button {
+  height: 35px;
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 0 5px 5px 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  opacity: .8;
+  outline: none;
+  border: none;
+}
+
+.search-filter button:hover {
+  opacity: 1;
+}
+
+.search-filter button:active {
+  filter: brightness(95%);
+}
+
+.filter-wraper form {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
 
 
 
@@ -233,5 +291,11 @@ main article {
   to {
     opacity: 0;
     scale: 50%;
+  }
+}
+
+@keyframes slideFilterShow {
+  to {
+
   }
 }

@@ -2,33 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="gandi purn jen">
-  <meta name="keyword" content="dicoding, bookshelf, learn">
-  <meta name="description" content="task dicoding bookshelf apps">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="gandi purn jen" />
+  <meta name="keyword" content="dicoding, bookshelf, learn" />
+  <meta name="description" content="task dicoding bookshelf apps" />
 
   <!-- css -->
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./responsive.css">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./responsive.css" />
   <!-- font awesome -->
-  <!-- <script src="https://kit.fontawesome.com/ab9936e19c.js" crossorigin="anonymous"></script> -->
+  <script src="https://kit.fontawesome.com/ab9936e19c.js" crossorigin="anonymous"></script>
 
-  <title>BookShelfApps </title>
+  <title>BookShelfApps</title>
 </head>
 
 <body>
   <!-- pop-up message -->
-  <div class="popup-blur">
-
-  </div>
+  <div class="popup-blur"></div>
 
   <!-- header -->
   <header class="container">
     <nav>
       <div class="navLogo">
-        <a href="#home"><img src="./asets/img/logo.png" alt="Logo"></a>
+        <a href="#home"><img src="./asets/img/logo.png" alt="Logo" /></a>
       </div>
       <div class="navMenu">
         <a href="#">Home</a>
@@ -44,13 +42,13 @@
 
       <form class="formAside" id="formCreate">
         <label for="formTitle">Title</label>
-        <input id="formTitle" type="text" required>
+        <input id="formTitle" type="text" required />
 
         <label for="formAuthor">Author</label>
-        <input id="formAuthor" type="text" required>
+        <input id="formAuthor" type="text" required />
 
         <label for="formYear">Year</label>
-        <input id="formYear" type="number" min="1500" max="2022" required>
+        <input id="formYear" type="number" min="1500" max="2022" required />
 
         <div class="checkbox">
           <input type="checkbox" class="check" id="isComplete" />
@@ -66,19 +64,48 @@
           </label>
         </div>
 
-        <input type="submit" class="formSubmit" value="SAVE">
+        <input type="submit" class="formSubmit" value="SAVE" />
       </form>
 
       <!-- notificaton  -->
       <div class="popup-wrap"></div>
-
     </aside>
 
     <article>
-      <h1>Hello world</h1>
+      <div class="filter-wraper">
+        <div class="search-filter">
+          <input type="text" placeholder=" &#xF002; Search" style="font-family: Arial, FontAwesome" />
+          <button><i class="fa-solid fa-filter"></i> Filter</button>
+        </div>
 
+        <form>
+          <div class="">
+            Order By
+            <div style="padding-left: 15px; padding-top: 10px;">
+              <input id="sortAll" type="radio" name="shortBy" value="all" checked="checked" />
+              <label for="sortAll"> All </label><br />
+              <input id="latest" type="radio" name="shortBy" value="latest" />
+              <label for="latest"> Latest </label><br />
+              <input id="longest" type="radio" name="shortBy" value="longest" />
+              <label for="longest"> Longest </label><br />
+            </div>
+          </div>
 
+          <div class="">
+            Is Complete
+            <div style="padding-left: 15px; padding-top: 10px">
+              <input id="completeAll" type="radio" name="isComplete" value="all" checked="checked" />
+              <label for="completeAll"> All </label><br />
+              <input id="finishReading" type="radio" name="isComplete" value="true" />
+              <label for="finishReading"> Finished Reading </label><br />
+              <input id="notFinishReading" type="radio" name="isComplete" value="false" />
+              <label for="notFinishReading"> Not Finish Reading </label><br />
+            </div>
+          </div>
+        </form>
 
+        <button>Filter</button>
+      </div>
     </article>
   </main>
 
