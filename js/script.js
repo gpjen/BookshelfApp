@@ -14,3 +14,15 @@ formCreate.addEventListener('submit', (e) => {
 
   popUpWrap.innerHTML = `<div class="popup-swap swipe-show" id="popup-swap"> ${title} added </div>`
 })
+
+const searchInput = document.getElementById("search")
+const btnFilter = document.getElementById("btnFilter")
+
+// btn filter handler
+btnFilter.addEventListener("click", (e) => {
+  document.querySelector(".wrap").classList.toggle("btnFilterClick")
+})
+
+
+
+

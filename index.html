@@ -19,8 +19,6 @@
 </head>
 
 <body>
-  <!-- pop-up message -->
-  <div class="popup-blur"></div>
 
   <!-- header -->
   <header class="container">
@@ -73,38 +71,70 @@
 
     <article>
       <div class="filter-wraper">
-        <div class="search-filter">
-          <input type="text" placeholder=" &#xF002; Search" style="font-family: Arial, FontAwesome" />
-          <button><i class="fa-solid fa-filter"></i> Filter</button>
+        <div class="wrap">
+          <div class="search-filter">
+            <input id="search" type="text" placeholder=" &#xF002; Search" style="font-family: Arial, FontAwesome" />
+            <button id="btnFilter"><i class="fa-solid fa-filter"></i> Filter</button>
+          </div>
+  
+          <form>
+            <div class="">
+              Order By
+              <div style="padding-left: 15px; padding-top: 10px;">
+                <input id="sortAll" type="radio" name="shortBy" value="all" checked="checked" />
+                <label for="sortAll"> All </label><br />
+                <input id="latest" type="radio" name="shortBy" value="latest" />
+                <label for="latest"> Latest </label><br />
+                <input id="longest" type="radio" name="shortBy" value="longest" />
+                <label for="longest"> Longest </label><br />
+              </div>
+            </div>
+  
+            <div class="">
+              Status
+              <div style="padding-left: 15px; padding-top: 10px">
+                <input id="completeAll" type="radio" name="isComplete" value="all" checked="checked" />
+                <label for="completeAll"> All </label><br />
+                <input id="finishReading" type="radio" name="isComplete" value="true" />
+                <label for="finishReading"> Finished Reading </label><br />
+                <input id="notFinishReading" type="radio" name="isComplete" value="false" />
+                <label for="notFinishReading"> Not Finish Reading </label><br />
+              </div>
+            </div>
+          </form>
+  
+          <button class="btn-filter">Filter</button>
         </div>
+      </div>
+      <div class="content">
+        
+        <div class="card-wrap">
+          <div class="card-header">
+            <span class="statusBook">Finish Reading</span>
+          </div>
+          <div class="card-body">
+            <h5> <center>Buku Pandora Bapak Jenggot</center> </h5>
+            <p><i class="fa-solid fa-person"></i> gandi purna jen</p>
+            <p><i class="fa-solid fa-calendar-days"></i> 2022</p>
 
-        <form>
-          <div class="">
-            Order By
-            <div style="padding-left: 15px; padding-top: 10px;">
-              <input id="sortAll" type="radio" name="shortBy" value="all" checked="checked" />
-              <label for="sortAll"> All </label><br />
-              <input id="latest" type="radio" name="shortBy" value="latest" />
-              <label for="latest"> Latest </label><br />
-              <input id="longest" type="radio" name="shortBy" value="longest" />
-              <label for="longest"> Longest </label><br />
+            <div class="action">
+              <button> <i class="fa-solid fa-circle-check"></i> Done</button>
+              <button> <i class="fa-solid fa-pen-to-square"></i> Edit</button>
+              <button> <i class="fa-solid fa-trash"></i> Delete</button>
             </div>
           </div>
 
-          <div class="">
-            Is Complete
-            <div style="padding-left: 15px; padding-top: 10px">
-              <input id="completeAll" type="radio" name="isComplete" value="all" checked="checked" />
-              <label for="completeAll"> All </label><br />
-              <input id="finishReading" type="radio" name="isComplete" value="true" />
-              <label for="finishReading"> Finished Reading </label><br />
-              <input id="notFinishReading" type="radio" name="isComplete" value="false" />
-              <label for="notFinishReading"> Not Finish Reading </label><br />
+          <div class="popup-blur">
+            <div class="editPopup">
+              <input type="text">
+              <input type="text">
+              <input type="number" min="1000" max="2022">
             </div>
           </div>
-        </form>
 
-        <button>Filter</button>
+        </div>
+        
+
       </div>
     </article>
   </main>
